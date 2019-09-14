@@ -29,14 +29,20 @@ body {
 }
 
 .page-main {
-    background: -moz-linear-gradient(-45deg, rgba(69, 112, 137, 1) 0%, rgba(77, 148, 149, 1) 48%, rgba(81, 169, 156, 1) 99%, rgba(81, 169, 156, 1) 100%);
-    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(69, 112, 137, 1)), color-stop(48%, rgba(77, 148, 149, 1)), color-stop(99%, rgba(81, 169, 156, 1)), color-stop(100%, rgba(81, 169, 156, 1)));
-    background: -webkit-linear-gradient(-45deg, rgba(69, 112, 137, 1) 0%, rgba(77, 148, 149, 1) 48%, rgba(81, 169, 156, 1) 99%, rgba(81, 169, 156, 1) 100%);
-    background: -o-linear-gradient(-45deg, rgba(69, 112, 137, 1) 0%, rgba(77, 148, 149, 1) 48%, rgba(81, 169, 156, 1) 99%, rgba(81, 169, 156, 1) 100%);
-    background: -ms-linear-gradient(-45deg, rgba(69, 112, 137, 1) 0%, rgba(77, 148, 149, 1) 48%, rgba(81, 169, 156, 1) 99%, rgba(81, 169, 156, 1) 100%);
-    background: linear-gradient(135deg, rgba(69, 112, 137, 1) 0%, rgba(77, 148, 149, 1) 48%, rgba(81, 169, 156, 1) 99%, rgba(81, 169, 156, 1) 100%);
+    background: rgba(72, 128, 142, 1);
+    background: -moz-linear-gradient(-45deg, rgba(72, 128, 142, 1) 0%, rgba(76, 147, 148, 1) 51%, rgba(78, 155, 151, 1) 60%, rgba(78, 155, 151, 1) 71%, rgba(81, 170, 156, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(72, 128, 142, 1)), color-stop(51%, rgba(76, 147, 148, 1)), color-stop(60%, rgba(78, 155, 151, 1)), color-stop(71%, rgba(78, 155, 151, 1)), color-stop(100%, rgba(81, 170, 156, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(72, 128, 142, 1) 0%, rgba(76, 147, 148, 1) 51%, rgba(78, 155, 151, 1) 60%, rgba(78, 155, 151, 1) 71%, rgba(81, 170, 156, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(72, 128, 142, 1) 0%, rgba(76, 147, 148, 1) 51%, rgba(78, 155, 151, 1) 60%, rgba(78, 155, 151, 1) 71%, rgba(81, 170, 156, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(72, 128, 142, 1) 0%, rgba(76, 147, 148, 1) 51%, rgba(78, 155, 151, 1) 60%, rgba(78, 155, 151, 1) 71%, rgba(81, 170, 156, 1) 100%);
+    background: linear-gradient(135deg, rgba(72, 128, 142, 1) 0%, rgba(76, 147, 148, 1) 51%, rgba(78, 155, 151, 1) 60%, rgba(78, 155, 151, 1) 71%, rgba(81, 170, 156, 1) 100%);
+    filter: progid:dximagetransform.microsoft.gradient( startColorstr="#48808e", endColorstr="#51aa9c", GradientType=1 );
     color: $light-color;
     padding-bottom: 158px;
+}
+
+.page {
+    padding-top: 161px;
 }
 
 .header {
@@ -86,6 +92,10 @@ body {
         letter-spacing: 0.7px;
         margin-bottom: 30px;
     }
+    &__name-top {
+        margin-top: 16px;
+        margin-left: 0;
+    }
     &__title {
         font-size: 48px;
         font-weight: 700;
@@ -119,6 +129,17 @@ body {
         padding: 14px 0;
         margin-top: 48px;
         margin-bottom: 19px;
+        &:hover {
+            -webkit-box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+    small {
+        font-family: $sans;
+        font-style: italic;
+        font-size: 12px;
+        letter-spacing: 0.2px;
     }
 }
 
@@ -132,5 +153,42 @@ body {
         height: 643px;
         background-image: url(../img/svg/book.svg);
         background-repeat: no-repeat;
+    }
+}
+
+.block-author {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block-ava {
+    position: relative;
+    &__svg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+    &__img {
+        margin-top: 47px;
+        margin-right: 44px;
+    }
+}
+
+.block-counter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 152px;
+    & p {
+        font-family: $sans;
+        font-size: 18px;
+        text-align: center;
+        & span {
+            display: block;
+            font-family: $roboto;
+            font-weight: 100;
+            font-size: 80px;
+            color: $accent-color;
+        }
     }
 }
